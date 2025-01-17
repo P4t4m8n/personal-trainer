@@ -8,8 +8,8 @@ export type TUser = TEntity & {
   email?: string;
   phone?: number | null;
   imgUrl?: string| null;
-  trainer?: TTrainer;
-  trainee?: TTrainee;
+  trainer?: TTrainer|null;
+  trainee?: TTrainee|null;
 };
 
 export type TUserUpdateDto = TEntity & {

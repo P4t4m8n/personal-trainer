@@ -1,12 +1,18 @@
 "use server";
 
+import { cookies } from "next/headers";
+
+import bcrypt from "bcrypt";
 import { prisma } from "@/prisma/prisma";
+
 import { TUser } from "@/types/user.type";
+
 import { authServerService } from "@/utils/server/auth.server.util";
 import { AppError } from "@/utils/server/Error.util";
+
 import { validateUserDto } from "@/validation/server/user.server.validation";
-import bcrypt from "bcrypt";
-import { cookies } from "next/headers";
+
+import { getUserById } from "./user.server.service";
 
 export const signIn = async (
   _: unknown,
@@ -125,21 +131,21 @@ export const signOut = async (): Promise<void> => {
   }
 };
 
-// export const getSessionUser = async (): Promise<TUser | null> => {
-//   try {
-//     const token = (await cookies()).get("session")?.value;
+export const getSessionUser = async (): Promise<TUser | null> => {
+  try {
+    const token = (await cookies()).get("session")?.value;
 
-//     if (!token) {
-//       return null;
-//     }
+    if (!token) {
+      return null;
+    }
 
-//     const payload = await authServerService.decodeToken(token);
+    const payload = await authServerService.decodeToken(token);
 
-//     const user = await getUserById(payload.userId as string);
+    const user = await getUserById(payload.userId as string);
 
-//     return user;
-//   } catch (error) {
-//     console.error("Error decoding token:", error);
-//     return null;
-//   }
-// };
+    return user;
+  } catch (error) {
+    AppError.create(`${error}`, 401, false);
+    return null;
+  }
+};
