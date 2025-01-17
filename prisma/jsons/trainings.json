@@ -1,0 +1,646 @@
+[
+  {
+    "name": "Push-ups",
+    "defaultSets": [
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      }
+    ]
+  },
+  {
+    "name": "Squats",
+    "defaultSets": [
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      }
+    ]
+  },
+  {
+    "name": "Lunges",
+    "defaultSets": [
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      }
+    ]
+  },
+  {
+    "name": "Plank",
+    "defaultSets": [
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      }
+    ]
+  },
+  {
+    "name": "Dead-lifts",
+    "defaultSets": [
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      }
+    ]
+  },
+  {
+    "name": "Bench Press",
+    "defaultSets": [
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      }
+    ]
+  },
+  {
+    "name": "Pull-ups",
+    "defaultSets": [
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      }
+    ]
+  },
+  {
+    "name": "Bicep Curls",
+    "defaultSets": [
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      }
+    ]
+  },
+  {
+    "name": "Tricep Dips",
+    "defaultSets": [
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      }
+    ]
+  },
+  {
+    "name": "Shoulder Press",
+    "defaultSets": [
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      }
+    ]
+  },
+  {
+    "name": "Lateral Raises",
+    "defaultSets": [
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      }
+    ]
+  },
+  {
+    "name": "Mountain Climbers",
+    "defaultSets": [
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      }
+    ]
+  },
+  {
+    "name": "Jumping Jacks",
+    "defaultSets": [
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      }
+    ]
+  },
+  {
+    "name": "Russian Twists",
+    "defaultSets": [
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      }
+    ]
+  },
+  {
+    "name": "Bicycle Crunches",
+    "defaultSets": [
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      }
+    ]
+  },
+  {
+    "name": "Side Plank",
+    "defaultSets": [
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      }
+    ]
+  },
+  {
+    "name": "Hip Thrusts",
+    "defaultSets": [
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      }
+    ]
+  },
+  {
+    "name": "Leg Press",
+    "defaultSets": [
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      }
+    ]
+  },
+  {
+    "name": "Calf Raises",
+    "defaultSets": [
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      }
+    ]
+  },
+  {
+    "name": "Chest Fly",
+    "defaultSets": [
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      }
+    ]
+  },
+  {
+    "name": "Kettle-bell Swings",
+    "defaultSets": [
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      }
+    ]
+  },
+  {
+    "name": "Dumbbell Rows",
+    "defaultSets": [
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      }
+    ]
+  },
+  {
+    "name": "Hammer Curls",
+    "defaultSets": [
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      }
+    ]
+  },
+  {
+    "name": "Reverse Lunges",
+    "defaultSets": [
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      }
+    ]
+  },
+  {
+    "name": "Glute Bridges",
+    "defaultSets": [
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      }
+    ]
+  },
+  {
+    "name": "Box Jumps",
+    "defaultSets": [
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      }
+    ]
+  },
+  {
+    "name": "Medicine Ball Slams",
+    "defaultSets": [
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      }
+    ]
+  },
+  {
+    "name": "Wall Sit",
+    "defaultSets": [
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      },
+      {
+        "reps": 10,
+        "weight": 10,
+        "rest": 30,
+        "setType": "DEFAULT"
+      }
+    ]
+  }
+]
