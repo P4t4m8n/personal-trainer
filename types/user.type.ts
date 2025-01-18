@@ -7,9 +7,9 @@ export type TUser = TEntity & {
   lastName?: string;
   email?: string;
   phone?: number | null;
-  imgUrl?: string| null;
-  trainer?: TTrainer|null;
-  trainee?: TTrainee|null;
+  imgUrl?: string | null;
+  trainer?: TTrainer | null;
+  trainee?: TTrainee | null;
 };
 
 export type TUserUpdateDto = TEntity & {
@@ -35,5 +35,9 @@ export type TUserCreateDto = {
 export type TUserFilter = {
   email?: string;
   phone?: string;
-  uniquePhoneId?: string;
+  firstName?: string;
+  lastName?: string;
+  includeTrainers?: boolean;
+  includeTrainees?: boolean;
+
 };
