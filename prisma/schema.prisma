@@ -52,7 +52,7 @@ model User {
   firstName    String   @default("")
   lastName     String   @default("")
   email        String   @unique
-  phone        Int?
+  phone        String?
   passwordHash String?
   googleIdHash String?
   imgUrl       String?

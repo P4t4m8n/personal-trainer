@@ -49,18 +49,17 @@ export const getUsers = async (filter: TUserFilter): Promise<TUser[]> => {
         firstName: firstName ? { startsWith: firstName } : undefined,
         lastName: lastName ? { startsWith: lastName } : undefined,
         email: email ? { contains: email } : undefined,
-        phone: phone ? { equals: +phone } : undefined,
-        ...(includeTrainees && !includeTrainers
-          ? { trainee: { isNot: null } } // Only users with a trainee relation
-          : includeTrainers && !includeTrainees
-          ? { trainer: { isNot: null } } // Only users with a trainer relation
-          : !includeTrainees && !includeTrainers
-          ? { AND: [{ trainee: { is: null } }, { trainer: { is: null } }] } // Users with no relations
-          : {}), // No additional filters if both are true
+        phone: phone ? { startsWith: phone } : undefined,
+        NOT: [
+          ...(includeTrainees ? [{ trainee: { isNot: null } }] : []), 
+          ...(!includeTrainers ? [{ trainer: { isNot: null } }] : []), 
+        ],
       },
       select: {
+        id: true,
         firstName: true,
         lastName: true,
+        email: true,
         trainee: {
           select: {
             id: true,

@@ -23,7 +23,6 @@ export const AuthProvider: FC<Props> = ({
     const fetchUser = async () => {
       try {
         const user = await authClientService.getSession();
-        console.log("user:", user)
         setUser(user);
         userRef.current = user;
       } catch (error) {
