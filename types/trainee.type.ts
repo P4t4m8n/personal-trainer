@@ -41,6 +41,10 @@ export type TTraineeMetrics = TEntity & {
   date?: Date;
 };
 
-export type TTraineeMetricsDto = Omit<TTraineeMetrics, "date"> & {
+export type TTraineeMetricsDto = TTraineeMetrics & {
+  traineeId?: string;
+};
+
+export type TTraineeMetricsFilter = {
   traineeId?: string;
 };

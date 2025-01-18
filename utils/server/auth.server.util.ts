@@ -18,7 +18,7 @@ const formDataToUserDTO = (formData: FormData): TUserCreateDto => {
     lastName,
     imgUrl: imgUrl || "/imgs/avatarDefault.svg",
     googleId,
-    phone: phone ? parseInt(sanitizeHtml(phone.toString())) : null,
+    phone: phone ? sanitizeHtml(phone.toString()) : null,
   };
 
   return returnedData;

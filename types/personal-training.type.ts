@@ -18,3 +18,11 @@ export type TPersonalTrainingDto = TEntity &
     programId?: string;
     traineeId: string;
   };
+
+export type TPersonalTrainingFilter = {
+  traineeId?: string;
+  trainingId?: string;
+  programId?: string;
+  skip?: number;
+  take?: number;
+};

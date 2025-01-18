@@ -4,26 +4,61 @@ import { prisma } from "@/prisma/prisma";
 import { TUser, TUserFilter } from "@/types/user.type";
 import { AppError } from "@/utils/server/Error.util";
 
-export const getUserById = async (userId: string): Promise<TUser | null> => {
+const USER_SEARCH_SELECT = {
+  id: true,
+  firstName: true,
+  lastName: true,
+  trainer: {
+    select: {
+      id: true,
+    },
+  },
+  trainee: {
+    select: {
+      id: true,
+    },
+  },
+};
+
+const USER_TRAINEE_INFO_SELECT = {
+  id: true,
+  firstName: true,
+  lastName: true,
+  phone: true,
+  email: true,
+};
+
+export const getUserById = async (
+  userId: string,
+): Promise<TUser | null> => {
   try {
     const user = prisma.user.findFirstOrThrow({
       where: {
         id: userId,
       },
       select: {
-        id: true,
-        firstName: true,
-        lastName: true,
-        trainer: {
-          select: {
-            id: true,
-          },
-        },
+        ...USER_SEARCH_SELECT,
+      },
+    });
+
+    return user;
+  } catch (error) {
+    throw AppError.create(`${error}`, 401, false);
+  }
+};
+
+export const getUserByTraineeId = async (
+  traineeId: string
+): Promise<TUser | null> => {
+  try {
+    const user = prisma.user.findFirstOrThrow({
+      where: {
         trainee: {
-          select: {
-            id: true,
-          },
+          id: traineeId,
         },
+      },
+      select: {
+        ...USER_TRAINEE_INFO_SELECT,
       },
     });
 
@@ -51,8 +86,8 @@ export const getUsers = async (filter: TUserFilter): Promise<TUser[]> => {
         email: email ? { contains: email } : undefined,
         phone: phone ? { startsWith: phone } : undefined,
         NOT: [
-          ...(includeTrainees ? [{ trainee: { isNot: null } }] : []), 
-          ...(!includeTrainers ? [{ trainer: { isNot: null } }] : []), 
+          ...(includeTrainees ? [{ trainee: { isNot: null } }] : []),
+          ...(!includeTrainers ? [{ trainer: { isNot: null } }] : []),
         ],
       },
       select: {

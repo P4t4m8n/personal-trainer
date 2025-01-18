@@ -1,6 +1,6 @@
 import { TTrainee } from "@/types/trainee.type";
 import TraineeInfo from "./TraineeInfo/TraineeInfo";
-import TraineeMetrics from "./TraineeMetrics/TraineeMetrics";
+import TraineeMetricsIndex from "./TraineeMetrics/TraineeMetricsIndex";
 import TraineePersonalTrainingsList from "./TraineePersonalTrainings/TraineePersonalTrainingsList";
 import TraineeProgramsList from "./TraineePrograms/TraineeProgramsList";
 
@@ -12,7 +12,7 @@ export default function TraineeDetailsIndex({ trainee }: Props) {
   return (
     <div className="grid grid-cols-2 grid-rows-2 w-full h-nested gap-4 ">
       <TraineeInfo user={user} />
-      <TraineeMetrics metrics={metrics} />
+      <TraineeMetricsIndex metrics={metrics} />
       <TraineePersonalTrainingsList personalTrainings={trainings || []} />
       <TraineeProgramsList programs={programs || []} />
     </div>
