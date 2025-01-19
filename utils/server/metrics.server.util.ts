@@ -15,6 +15,7 @@ const formDataToMetricsDto = (formData: FormData): TTraineeMetricsDto => {
   const date = new Date(sanitizeHtml(formData.get("date")?.toString() || ""));
 
   const traineeId = sanitizeHtml(formData.get("traineeId")?.toString() || "");
+  const id = sanitizeHtml(formData.get("id")?.toString() || "");
 
   return {
     heartRate,
@@ -25,6 +26,7 @@ const formDataToMetricsDto = (formData: FormData): TTraineeMetricsDto => {
     bloodPressureDiastole,
     date,
     traineeId,
+    id,
   };
 };
 

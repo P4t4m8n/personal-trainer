@@ -1,10 +1,10 @@
 "use client";
 import { TTraineeMetrics } from "@/types/trainee.type";
-import TraineeMetricsLatest from "./TraineeMetricsLatest";
+import TraineeMetricsLatest from "./TraineeMetricsLatest/TraineeMetricsLatest";
 import ItemList from "@/components/UI/ItemList";
 import TraineeMetricsPreview from "./TraineeMetricsPreview";
 import { useState } from "react";
-import TraineeMetricsModel from "./TraineeMetricsModel";
+import TraineeMetricsEditModel from "./TraineeMetricsEditModel";
 
 interface Props {
   metricsProps?: TTraineeMetrics[];
@@ -17,14 +17,29 @@ export default function TraineeMetricsIndex({
 }: Props) {
   const [metrics, setMetrics] = useState<TTraineeMetrics[]>(metricsProps || []);
 
-
   return (
-    <div className="w-full h-full border p-2 rounded borer-white">
-      <TraineeMetricsLatest metrics={metrics?.[0]} />
-      <TraineeMetricsModel traineeId={traineeId} setMetrics={setMetrics} />
+    <div className="w-full h-full border p-2 rounded borer-white flex flex-col gap-4 ">
+      <div className="flex w-full h-48  p-2 gap-2">
+        <TraineeMetricsLatest
+          metric={metrics?.[0]}
+          setMetrics={setMetrics}
+          traineeId={traineeId}
+        />
+        <TraineeMetricsEditModel
+          traineeId={traineeId}
+          setMetrics={setMetrics}
+        />
+      </div>
       <ItemList
+        listStyle="flex flex-col gap-1 h-[calc(100%-12rem)] overflow-y-auto"
         items={metrics?.slice(1) || []}
-        renderItem={(metric) => <TraineeMetricsPreview metric={metric} />}
+        renderItem={(metric) => (
+          <TraineeMetricsPreview
+            metric={metric}
+            setMetrics={setMetrics}
+            traineeId={traineeId}
+          />
+        )}
       />
     </div>
   );

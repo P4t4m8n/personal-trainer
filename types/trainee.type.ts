@@ -27,6 +27,8 @@ export type TTraineeFilter = {
   firstName?: string;
   lastName?: string;
   email?: string;
+  trainerId?: string;
+  phone?: string;
   skip?: number;
   take?: number;
 };

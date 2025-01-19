@@ -3,34 +3,9 @@
 import { prisma } from "@/prisma/prisma";
 import { TUser, TUserFilter } from "@/types/user.type";
 import { AppError } from "@/utils/server/Error.util";
+import { USER_SEARCH_SELECT, USER_TRAINEE_INFO_SELECT } from "./select";
 
-const USER_SEARCH_SELECT = {
-  id: true,
-  firstName: true,
-  lastName: true,
-  trainer: {
-    select: {
-      id: true,
-    },
-  },
-  trainee: {
-    select: {
-      id: true,
-    },
-  },
-};
-
-const USER_TRAINEE_INFO_SELECT = {
-  id: true,
-  firstName: true,
-  lastName: true,
-  phone: true,
-  email: true,
-};
-
-export const getUserById = async (
-  userId: string,
-): Promise<TUser | null> => {
+export const getUserById = async (userId: string): Promise<TUser | null> => {
   try {
     const user = prisma.user.findFirstOrThrow({
       where: {
@@ -81,8 +56,12 @@ export const getUsers = async (filter: TUserFilter): Promise<TUser[]> => {
     } = filter;
     const users = await prisma.user.findMany({
       where: {
-        firstName: firstName ? { startsWith: firstName } : undefined,
-        lastName: lastName ? { startsWith: lastName } : undefined,
+        firstName: firstName
+          ? { startsWith: firstName, mode: "insensitive" }
+          : undefined,
+        lastName: lastName
+          ? { startsWith: lastName, mode: "insensitive" }
+          : undefined,
         email: email ? { contains: email } : undefined,
         phone: phone ? { startsWith: phone } : undefined,
         NOT: [
@@ -91,10 +70,7 @@ export const getUsers = async (filter: TUserFilter): Promise<TUser[]> => {
         ],
       },
       select: {
-        id: true,
-        firstName: true,
-        lastName: true,
-        email: true,
+        ...USER_TRAINEE_INFO_SELECT,
         trainee: {
           select: {
             id: true,

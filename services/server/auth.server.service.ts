@@ -39,12 +39,11 @@ export const signIn = async (
       if (!match) {
         throw AppError.create("Invalid credentials", 401, true);
       }
-    } else if (
-      user?.googleIdHash &&
-      googleId &&
-      user.googleIdHash !== googleId
-    ) {
-      throw AppError.create("Invalid credentials", 401, true);
+    } else if (user?.googleIdHash && googleId) {
+      const match = await bcrypt.compare(googleId, user.googleIdHash);
+      if (!match) {
+        throw AppError.create("Invalid credentials", 401, true);
+      }
     }
 
     const token = await authServerService.createJWT(user.id);

@@ -12,7 +12,7 @@ export default function TrainerNav() {
 }
 const NAV_LINKS = [
     {
-      href: "trainees",
+      href: "/trainer/trainees",
       text: "Trainees",
     },
     {

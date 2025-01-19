@@ -12,6 +12,7 @@ interface Action<T> {
 //   (Required<Pick<Action<T>, "onClick">> | Required<Pick<Action<T>, "href">>);
 
 interface Props<T> {
+  header:string[]
   items: T[];
   actions?: Action<T>[];
 }

@@ -39,6 +39,10 @@ export const getMetrics = async (
       omit: {
         traineeId: false,
       },
+      orderBy: {
+        date: "asc",
+      },
+      take: 5,
     });
 
     return metrics;
@@ -48,7 +52,6 @@ export const getMetrics = async (
 };
 
 export const saveMetrics = async (
-  state: unknown,
   formData: FormData
 ): Promise<TTraineeMetrics> => {
   try {
@@ -59,17 +62,20 @@ export const saveMetrics = async (
       throw AppError.create(errors.join(", "), 400, true);
     }
 
-    const metric = await prisma.traineeMetrics.upsert({
-      where: {
-        id: metricsDto?.id,
-      },
-      create: {
-        ...metricsDto,
-        traineeId: metricsDto.traineeId!,
-      },
-      update: {
-        ...metricsDto,
-      },
+    if (metricsDto?.id) {
+      const metric = await prisma.traineeMetrics.update({
+        where: {
+          id: metricsDto.id,
+        },
+        data: metricsDto,
+      });
+      return metric;
+    }
+
+    delete metricsDto.id;
+
+    const metric = await prisma.traineeMetrics.create({
+      data: { ...metricsDto, traineeId: metricsDto.traineeId! },
     });
 
     return metric;

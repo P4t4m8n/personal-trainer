@@ -1,10 +1,10 @@
+"use client";
 import Button from "@/components/UI/Button";
 import Input from "@/components/UI/Form/Input";
-import { usePrevious } from "@/hooks/usePrevious";
 import { saveMetrics } from "@/services/server/metrics.server.service";
 import { TTraineeMetrics } from "@/types/trainee.type";
 import { dateUtil } from "@/utils/client/date.util";
-import { useActionState } from "react";
+import { useState } from "react";
 
 interface Props {
   metric?: TTraineeMetrics;
@@ -18,22 +18,32 @@ export default function TraineeMetricEdit({
   traineeId,
   setMetrics,
 }: Props) {
-  const [state, formAction, isPending] = useActionState(saveMetrics, null);
-  const previousState = usePrevious(state);
-  if (previousState !== state) {
-    setMetrics((prev) => {
-      const idx = prev.findIndex((m) => m.id === state?.id);
-      if (idx === -1) {
-        return [...prev, state!];
-      }
-      prev[idx] = state!;
-      return prev;
-    });
-    setIsOpen(false);
-  }
+  const [isLoading, setIsLoading] = useState(false);
+
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    try {
+      e.preventDefault();
+      setIsLoading(true);
+      const formData = new FormData(e.currentTarget);
+      const metric = await saveMetrics(formData);
+      setMetrics((prev) => {
+        const idx = prev.findIndex((m) => m.id === metric?.id);
+        if (idx === -1) {
+          return [...prev, metric];
+        }
+        prev[idx] = metric;
+        return [...prev];
+      });
+      setIsOpen(false);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
   const formattedDate = dateUtil.formatDateForInput(metric?.date);
   return (
-    <form action={formAction} className="flex flex-col gap-2">
+    <form onSubmit={onSubmit} className="flex flex-col gap-2">
       <Input
         type="number"
         placeholder="Heart rate"
@@ -97,7 +107,7 @@ export default function TraineeMetricEdit({
         styleSize="none"
         type="submit"
         className="p-2 border rounded"
-        disabled={isPending}
+        disabled={isLoading}
       >
         Save
       </Button>

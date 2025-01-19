@@ -10,7 +10,7 @@ interface Props {
   traineeId: string;
   setMetrics: React.Dispatch<React.SetStateAction<TTraineeMetrics[]>>;
 }
-export default function TraineeMetricsModel({
+export default function TraineeMetricsEditModel({
   metric,
   traineeId,
   setMetrics,
@@ -23,7 +23,7 @@ export default function TraineeMetricsModel({
       <Button
         styleMode="none"
         styleSize="none"
-        className="p-2 border rounded"
+        className="underline"
         onClick={() => setIsOpen(true)}
       >
         {isNew}
