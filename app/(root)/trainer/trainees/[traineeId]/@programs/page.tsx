@@ -1,4 +1,4 @@
-import TraineeProgramsList from "@/components/Trainee/TraineeDetails/TraineePrograms/TraineeProgramsList";
+import TraineeProgramsIndex from "@/components/Trainee/TraineeDetails/TraineePrograms/TraineeProgramsIndex";
 import { getPrograms } from "@/services/server/program.server";
 
 export default async function TraineeProgramsPage({
@@ -10,5 +10,5 @@ export default async function TraineeProgramsPage({
 
   const programs = await getPrograms({ traineeId });
 
-  return <TraineeProgramsList programs={programs} />;
+  return <TraineeProgramsIndex programs={programs} />;
 }
